@@ -33,3 +33,10 @@ gt.test('reorder and bind', function () {
   gt.ok(everyPositive([1, 2, 3]));
   gt.ok(!everyPositive([1, -2, 3]));
 });
+
+gt.test('_ traditional way', function () {
+  gt.ok(_.every([1, 2, 3], isPositive));
+  // we cannot bind "isPositive" to "_.every" function even from the right,
+  // because _.every has signature
+  // _.every(collection, [callback=identity], [thisArg])
+});
