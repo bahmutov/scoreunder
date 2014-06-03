@@ -1,0 +1,26 @@
+{
+  "name": "scoreunder",
+  "version": "0.0.0",
+  "description": "Reorders function's first two arguments to make underscore or lodash more functional",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:bahmutov/scoreunder.git"
+  },
+  "keywords": [
+    "functional",
+    "underscore",
+    "lodash",
+    "composition",
+    "arguments"
+  ],
+  "author": "Gleb Bahmutov <gleb.bahmutov@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/bahmutov/scoreunder/issues"
+  },
+  "homepage": "https://github.com/bahmutov/scoreunder"
+}
