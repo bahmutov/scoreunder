@@ -4,7 +4,7 @@
   "description": "Reorders function's first two arguments to make underscore or lodash more functional",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "node node_modules/gt test/*.js --output"
   },
   "repository": {
     "type": "git",
@@ -22,5 +22,12 @@
   "bugs": {
     "url": "https://github.com/bahmutov/scoreunder/issues"
   },
-  "homepage": "https://github.com/bahmutov/scoreunder"
+  "homepage": "https://github.com/bahmutov/scoreunder",
+  "dependencies": {
+    "lodash.partial": "^2.4.1"
+  },
+  "devDependencies": {
+    "gt": "^0.8.36",
+    "lodash": "^2.4.1"
+  }
 }
