@@ -2,6 +2,8 @@
 
 > Makes _ more functional.
 
+[![NPM][scoreunder-icon] ][scoreunder-url]
+
 [![Build status][scoreunder-ci-image] ][scoreunder-ci-url]
 [![dependencies][scoreunder-dependencies-image] ][scoreunder-dependencies-url]
 [![devdependencies][scoreunder-devdependencies-image] ][scoreunder-devdependencies-url]

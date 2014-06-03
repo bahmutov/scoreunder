@@ -1,6 +1,6 @@
 {
   "name": "scoreunder",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "Reorders function's first two arguments to make underscore or lodash more functional",
   "main": "index.js",
   "scripts": {
