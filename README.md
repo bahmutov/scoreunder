@@ -24,7 +24,7 @@ because `_.every` has signature
 Using *scoreunder* we can:
 
 ```js
-var under = require(scoreunder');
+var under = require('scoreunder');
 function isPositive(a) { return a > 0; }
 var everyPositive = under.partialFn(_.every, isPositive);
 everyPositive([1, 2, 3]); // true
@@ -32,7 +32,7 @@ everyPositive([1, 2, 3]); // true
 
 ## Install
 
-NPM: 'npm install scoreunder --save'
+NPM: `npm install scoreunder --save`
 
 ## API
 
@@ -58,8 +58,8 @@ everyPositive([1, 2, 3]); // true
 ## Why?
 
 Because [Hey Underscore, You're Doing It Wrong!](https://www.youtube.com/watch?v=m3svKOdZijA)
-by Brian Lonsdorf. The proposed solutions (libraries like [wu](http://fitzgen.github.io/wu.js/),
-[ramda](https://github.com/CrossEye/ramda)) are too extreme.
+by Brian Lonsdorf. Switching to another library like [wu](http://fitzgen.github.io/wu.js/)
+or [ramda](https://github.com/CrossEye/ramda) is too extreme.
 
 ### Small print
 
