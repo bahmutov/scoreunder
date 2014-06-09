@@ -63,6 +63,9 @@ Because [Hey Underscore, You're Doing It Wrong!](https://www.youtube.com/watch?v
 by Brian Lonsdorf. Switching to another library like [wu](http://fitzgen.github.io/wu.js/)
 or [ramda](https://github.com/CrossEye/ramda) is too extreme.
 
+Plus I find that putting callback first leads to
+[code that is more elegant](http://bahmutov.calepin.co/put-callback-first-for-elegance.html).
+
 ### Small print
 
 Author: Gleb Bahmutov &copy; 2014
