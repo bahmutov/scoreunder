@@ -40,3 +40,71 @@ gt.test('_ traditional way', function () {
   // because _.every has signature
   // _.every(collection, [callback=identity], [thisArg])
 });
+
+gt.test('partial apply multiple arguments', function () {
+  var _first = under.partialFn(_.first);
+  var _first2 = _.partial(_first, 2, 'fooBar');
+  var result = _first2();
+  gt.aequal(result, ['f', 'o']);
+});
+
+gt.module('strings to chars');
+
+gt.test('first two elements of an array', function () {
+  var firstTwo = under.partialFn(_.first, 2);
+  gt.func(firstTwo, 'returns a function');
+  var result = firstTwo(['a', 'b', 'c', 'd']);
+  gt.aequal(result, ['a', 'b']);
+});
+
+gt.test('first two elements of an array again', function () {
+  var firstTwo = under.partialFn(_.first, 2);
+  gt.func(firstTwo, 'returns a function');
+  var result = firstTwo(['a', 'b', 'c', 'd']);
+  gt.aequal(result, ['a', 'b']);
+});
+
+gt.test('first chars of a string without reordering', function () {
+  var result = _.first('fooBar', 2);
+  gt.aequal(result, ['f', 'o']);
+});
+
+gt.test('first chars of a string in steps', function () {
+  var _first = under.ba(_.first);
+  var result = _first(2, 'fooBar');
+  gt.aequal(result, ['f', 'o']);
+});
+
+gt.test('first chars of a string with partial apply', function () {
+  var _first = under.ba(_.first);
+  var _first2 = _.partial(_first, 2);
+  var result = _first2('fooBar');
+  gt.aequal(result, ['f', 'o']);
+});
+
+gt.test('first chars of a string in single step', function () {
+  var _first2 = under.partialFn(_.first, 2);
+  var result = _first2('fooBar');
+  gt.aequal(result, ['f', 'o']);
+});
+
+gt.test('first numbers with unary', function () {
+  var firstTwo = under.partialFn(_.first, 2);
+  var result = _.map([[6, 1, 4, 8], [9, 5, 10, 1]], function (k) {
+    return firstTwo(k);
+  });
+  gt.aequal(result, [[6, 1], [9, 5]]);
+});
+
+function unary(fn) {
+  return function (arg) {
+    return fn(arg);
+  };
+}
+
+gt.test('first characters from list of words', function () {
+  var firstTwo = under.partialFn(_.first, 2);
+  var mapFirstTwo = under.partialFn(_.map, unary(firstTwo));
+  var result = mapFirstTwo(['hello', 'world']);
+  gt.aequal(result, [['h', 'e'], ['w', 'o']]);
+});

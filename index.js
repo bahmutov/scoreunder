@@ -10,8 +10,11 @@ function ba(fn) {
   };
 }
 
-function partialFn(_fn, fn) {
-  return partial(ba(_fn), fn);
+function partialFn(_fn) {
+  var reordered = ba(_fn);
+  var args = Array.prototype.slice.call(arguments, 0);
+  args[0] = reordered;
+  return partial.apply(null, args);
 }
 
 module.exports = {
