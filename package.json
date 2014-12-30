@@ -27,7 +27,7 @@
     "lodash.partial": "^2.4.1"
   },
   "devDependencies": {
-    "gt": "^0.8.38",
+    "gt": "0.8.47",
     "lodash": "^2.4.1"
   }
 }
